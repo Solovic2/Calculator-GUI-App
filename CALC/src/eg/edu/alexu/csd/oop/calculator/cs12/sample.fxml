@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="530.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eg.edu.alexu.csd.oop.calculator.cs12.Controller">
+    <items>
+        <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="318.0" style="-fx-background-color: #333;">
+            <children>
+                <TextField id="text" fx:id="text" alignment="CENTER" layoutY="30.0" onAction="#textfield" prefHeight="60.0" prefWidth="318.0" style="-fx-background-color: #AAA;" AnchorPane.topAnchor="30.0" />
+                <Button layoutY="153.0" mnemonicParsing="false" onAction="#prevfn" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #333;" text="Prev" textFill="WHITE" />
+                <Button layoutX="222.0" layoutY="153.0" mnemonicParsing="false" onAction="#nextfn" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #333;" text="Next" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </Button>
+                <Label fx:id="resultcalc" alignment="CENTER" layoutY="90.0" prefHeight="60.0" prefWidth="318.0" style="-fx-background-color: #bbb;" />
+                <MenuButton fx:id="menulabels" alignment="CENTER" layoutX="116.0" layoutY="1.0" mnemonicParsing="false" prefHeight="28.2" prefWidth="206.0" style="-fx-background-color: #eee;" text="Previous Calculations">
+                    <items>
+                        <MenuItem fx:id="lab" mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="label1" onMousePressed="#clcs" prefHeight="20.0" prefWidth="295.0" text=" " />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="lab1" mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="label2" onMousePressed="#clcs2" prefHeight="20.0" prefWidth="295.0" text=" " />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="lab2" mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="label3" onMousePressed="#clcs3" prefHeight="20.0" prefWidth="295.0" text=" " />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="lab3" mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="label4" onMousePressed="#clcs4" prefHeight="11.0" prefWidth="295.0" text=" " />
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="lab4" mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="label5" onMousePressed="#clcs5" prefHeight="20.0" prefWidth="295.0" text=" " />
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </MenuButton>
+                <Button layoutY="1.0" mnemonicParsing="false" onAction="#save" prefHeight="29.0" prefWidth="58.59" style="-fx-background-color: #333;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="59.0" layoutY="1.0" mnemonicParsing="false" onAction="#load" prefHeight="29.0" prefWidth="59.0" style="-fx-background-color: #333;" text="Load" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="75.0" prefWidth="318.0">
+            <children>
+                <GridPane alignment="CENTER" hgap="5.0" prefHeight="350.0" prefWidth="320.0" style="-fx-background-color: #b9b9b9;" vgap="5.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="btnclear" mnemonicParsing="false" onAction="#btnclear" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="C" textFill="WHITE" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btndel" mnemonicParsing="false" onAction="#btndel" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="D" textFill="WHITE" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnbar" mnemonicParsing="false" onAction="#btnbar" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="÷" textFill="WHITE" GridPane.columnIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn8" mnemonicParsing="false" onAction="#btn8" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="8" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn9" mnemonicParsing="false" onAction="#btn9" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="9" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnmultiply" mnemonicParsing="false" onAction="#btnmultiply" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="×" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn4" mnemonicParsing="false" onAction="#btn4" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="4" textFill="WHITE" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn5" mnemonicParsing="false" onAction="#btn5" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="5" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn6" mnemonicParsing="false" onAction="#btn6" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="6" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnminus" mnemonicParsing="false" onAction="#btnminus" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn1" mnemonicParsing="false" onAction="#btn1" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="1" textFill="WHITE" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn2" mnemonicParsing="false" onAction="#btn2" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn0" minWidth="160.0" mnemonicParsing="false" onAction="#btn0" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="0" textFill="WHITE" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn3" mnemonicParsing="false" onAction="#btn3" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="3" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btndot" mnemonicParsing="false" onAction="#btndot" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="." textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnplus" mnemonicParsing="false" onAction="#btnplus" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="equal" mnemonicParsing="false" onAction="#equalsbtn" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="=" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btn7" mnemonicParsing="false" onAction="#btn7" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="7" textFill="WHITE" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="btnmodule" layoutX="112.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnmodule" prefHeight="186.0" prefWidth="198.0" style="-fx-background-color: #333;" text="\%" textFill="WHITE">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </GridPane>
+            </children></AnchorPane>
+    </items>
+</SplitPane>
